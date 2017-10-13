@@ -1,0 +1,35 @@
+.example-container {
+  width: 100%;
+  height: 780px;
+}
+
+.example-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  box-shadow: 0 0px 6px 2px rgb(191, 186, 190);
+  display: flex;
+  flex-direction: column;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content{
+  /* margin-top: 68px;*/
+  max-height: 780px;
+  width: -webkit-fill-available;
+  overflow: auto;
+}
+
+.content-header{
+  position: fixed;
+  top: 0px;
+  width: -webkit-fill-available;
+  box-shadow: 0 1px 6px 2px rgb(191, 186, 190);
+}
