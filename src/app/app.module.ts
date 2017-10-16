@@ -29,7 +29,6 @@ import { CardFancyExampleComponent } from './card-fancy-example/card-fancy-examp
 import { AccountCardComponent } from './account-card/account-card.component';
 import { MainContentHeaderComponent } from './main-content-header/main-content-header.component';
 import { SpaceUsedPrograssComponent } from './space-used-prograss/space-used-prograss.component';
-import { CheclComponent } from './checl/checl.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +39,7 @@ import { CheclComponent } from './checl/checl.component';
     CardFancyExampleComponent,
     AccountCardComponent,
     MainContentHeaderComponent,
-    SpaceUsedPrograssComponent,
-    CheclComponent
+    SpaceUsedPrograssComponent
   ],
   imports: [
     BrowserModule,

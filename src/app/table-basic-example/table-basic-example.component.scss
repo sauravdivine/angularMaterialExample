@@ -15,3 +15,8 @@
   flex-direction: row;
   align-items:center;
 }
+
+.my-md-cell,
+.my-md-header-cell {
+  flex: 0 0 70%;
+}

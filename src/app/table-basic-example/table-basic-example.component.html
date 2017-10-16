@@ -6,8 +6,8 @@
 
     <!-- Name Column -->
     <ng-container mdColumnDef="name">
-      <md-header-cell *mdHeaderCellDef> Name </md-header-cell>
-      <md-cell *mdCellDef="let element">
+      <md-header-cell *mdHeaderCellDef class="my-md-header-cell"> Name </md-header-cell>
+      <md-cell *mdCellDef="let element" class="my-md-cell">
         <div class="nameCell">
           <md-icon>folder</md-icon>
           <span> &nbsp;&nbsp;{{element.name}}</span>
