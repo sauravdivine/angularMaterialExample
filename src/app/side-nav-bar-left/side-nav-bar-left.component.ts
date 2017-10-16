@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-side-nav-bar-left',
   templateUrl: './side-nav-bar-left.component.html',
-  styleUrls: ['./side-nav-bar-left.component.css']
+  styleUrls: ['./side-nav-bar-left.component.scss']
 })
 export class SideNavBarLeftComponent implements OnInit {
+
+  active = 0;
   folders = [
     {
       name: 'My Drive',
@@ -30,9 +33,15 @@ export class SideNavBarLeftComponent implements OnInit {
       icon: 'delete'
     }
   ];
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(public snackBar: MatSnackBar) {}
+  
+    ngOnInit() {
+    }
+  
+    openSnackBar(message: string, action: string) {
+      this.snackBar.open(message, action, {
+        duration: 2000,
+      });
+    }
 
 }

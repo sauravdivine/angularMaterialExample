@@ -1,2 +1,24 @@
-<app-multi-row-toolbar>loading....</app-multi-row-toolbar>
-<app-side-nav-bar-left>loading....</app-side-nav-bar-left>
+<div class="page-container">
+    <div class="header-container">
+        <app-multi-row-toolbar>loading....</app-multi-row-toolbar>
+    </div>
+
+    <div class="main-container">
+        <app-side-nav-bar-left>loading....</app-side-nav-bar-left>
+        <button md-mini-fab class="example-fab" [mdMenuTriggerFor]="newMenu">
+            <md-icon>file_upload</md-icon>
+        </button>
+        <md-menu #newMenu="mdMenu">
+                <button md-menu-item>
+                  <md-icon>insert_drive_file</md-icon>
+                  <span>Single file</span>
+                </button>
+                <md-divider></md-divider>
+                <button md-menu-item>
+                  <md-icon>insert_drive_file</md-icon>
+                  <span>Multiple file</span>
+                </button>
+              </md-menu>
+    </div>
+
+</div>

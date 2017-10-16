@@ -6,10 +6,10 @@ import 'rxjs/add/observable/of';
 @Component({
   selector: 'app-table-basic-example',
   templateUrl: './table-basic-example.component.html',
-  styleUrls: ['./table-basic-example.component.css']
+  styleUrls: ['./table-basic-example.component.scss']
 })
 export class TableBasicExampleComponent implements OnInit {
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns = ['name', 'owner', 'last_modified', 'size'];
   dataSource = new ExampleDataSource();
 
   constructor() { }
@@ -21,32 +21,31 @@ export class TableBasicExampleComponent implements OnInit {
 
 export interface Element {
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  owner: string, last_modified: number;
+  size: string;
 }
 
 const data: Element[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-  { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-  { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-  { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-  { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-  { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-  { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-  { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-  { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-  { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-  { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+  { name: 'folder', owner: 'me', last_modified: 1.0079, size: '1 mb' },
+  { name: 'mp3', owner: 'me', last_modified: 4.0026, size: '1 mb' },
+  { name: 'Lithium', owner: 'me', last_modified: 6.941, size: '1 mb' },
+  { name: 'Beryllium', owner: 'me', last_modified: 9.0122, size: '1 mb' },
+  { name: 'Boron', owner: 'me', last_modified: 10.811, size: '1 mb '},
+  { name: 'Carbon', owner: 'me', last_modified: 12.0107, size: '1 mb' },
+  { name: 'Nitrogen', owner: 'me', last_modified: 14.0067, size: '1 mb' },
+  { name: 'Oxygen', owner: 'me', last_modified: 15.9994, size: '1 mb '},
+  { name: 'Fluorine', owner: 'me', last_modified: 18.9984, size: '1 mb '},
+  { name: 'Neon', owner: 'me', last_modified: 20.1797, size: '1 mb' },
+  { name: 'Sodium', owner: 'me', last_modified: 22.9897, size: '1 mb' },
+  { name: 'Magnesium', owner: 'me', last_modified: 24.305, size: '1 mb' },
+  { name: 'Aluminum', owner: 'me', last_modified: 26.9815, size: '1 mb' },
+  { name: 'Silicon', owner: 'me', last_modified: 28.0855, size: '1 mb' },
+  { name: 'Phosphorus', owner: 'me', last_modified: 30.9738, size: '1 mb' },
+  { name: 'Sulfur', owner: 'me', last_modified: 32.065, size: '1 mb '},
+  { name: 'Chlorine', owner: 'me', last_modified: 35.453, size: '1 mb' },
+  { name: 'Argon', owner: 'me', last_modified: 39.948, size: '1 mb' },
+  { name: 'Potassium', owner: 'me', last_modified: 39.0983, size: '1 mb' },
+  { name: 'Calcium', owner: 'me', last_modified: 40.078, size: '1 mb' },
 ];
 
 /**

@@ -4,28 +4,33 @@
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container mdColumnDef="position">
-      <md-header-cell *mdHeaderCellDef> No. </md-header-cell>
-      <md-cell *mdCellDef="let element"> {{element.position}} </md-cell>
-    </ng-container>
-
     <!-- Name Column -->
     <ng-container mdColumnDef="name">
       <md-header-cell *mdHeaderCellDef> Name </md-header-cell>
-      <md-cell *mdCellDef="let element"> {{element.name}} </md-cell>
+      <md-cell *mdCellDef="let element">
+        <div class="nameCell">
+          <md-icon>folder</md-icon>
+          <span> &nbsp;&nbsp;{{element.name}}</span>
+        </div>
+      </md-cell>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container mdColumnDef="weight">
-      <md-header-cell *mdHeaderCellDef> Weight </md-header-cell>
-      <md-cell *mdCellDef="let element"> {{element.weight}} </md-cell>
+    <ng-container mdColumnDef="owner">
+      <md-header-cell *mdHeaderCellDef> Owner </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.owner}} </md-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container mdColumnDef="last_modified">
+      <md-header-cell *mdHeaderCellDef> Last modified </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.last_modified}} </md-cell>
     </ng-container>
 
     <!-- Color Column -->
-    <ng-container mdColumnDef="symbol">
-      <md-header-cell *mdHeaderCellDef> Symbol </md-header-cell>
-      <md-cell *mdCellDef="let element"> {{element.symbol}} </md-cell>
+    <ng-container mdColumnDef="size">
+      <md-header-cell *mdHeaderCellDef> Size </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.size}} </md-cell>
     </ng-container>
 
     <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>

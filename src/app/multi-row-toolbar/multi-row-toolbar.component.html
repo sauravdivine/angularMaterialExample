@@ -1,39 +1,46 @@
 <md-toolbar color="primary">
-    <md-icon>storage</md-icon>  
-  <span>&nbspDrive</span>
-    <span class="example-spacer"></span>
-    <md-form-field class="example-full-width">
-      <input mdInput placeholder="Search "  value="">
-    </md-form-field>
-    <!-- <md-icon class="example-icon">favorite</md-icon>
+  <md-icon>storage</md-icon>
+  <span> &nbsp;Drive</span>
+  <span class="example-spacer"></span>
+  <md-form-field class="example-full-width">
+    <md-icon mdPrefix>search</md-icon>
+    <input mdInput type="search" placeholder="Search " value="">
+  </md-form-field>
+  <!-- <md-icon class="example-icon">favorite</md-icon>
     <md-icon class="example-icon">fingerprint</md-icon> -->
-    <div md-card-avatar class="example-header-image" [mdMenuTriggerFor]="profileMenu"></div>
+    <md-icon class="example-icon" mdTooltip="Themes">format_color_fill</md-icon>
+  <div md-card-avatar class="example-header-image" [mdMenuTriggerFor]="profileMenu"></div>
   <md-toolbar-row>
-      <button md-raised-button color="accent" [mdMenuTriggerFor]="newMenu">NEW</button>
-      <span class="example-spacer"></span>
-      <md-icon class="example-icon">view_module</md-icon>
-      <md-icon class="example-icon">info</md-icon>
-      <md-icon class="example-icon">settings</md-icon>
+    <button md-raised-button color="accent" [mdMenuTriggerFor]="newMenu" >NEW</button>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon" mdTooltip="Get share link">link</md-icon>
+    <md-icon class="example-icon" mdTooltip="Share">person_add</md-icon>
+    <md-icon class="example-icon" mdTooltip="Delete">delete</md-icon>
+    <md-icon class="example-icon" mdTooltip="options">more_vert</md-icon>    
+    <md-icon class="example-icon" mdTooltip="Grid view">view_module</md-icon>
+    <md-icon class="example-icon" mdTooltip="info">info</md-icon>
+    <md-icon class="example-icon"mdTooltip="Settings">settings</md-icon>
   </md-toolbar-row>
 </md-toolbar>
 <md-menu #profileMenu="mdMenu">
   <app-account-card>card loading....</app-account-card>
 </md-menu>
 <md-menu #newMenu="mdMenu">
-    <button md-menu-item>
-        <md-icon>insert_drive_file</md-icon>
-        <span>Text file</span>
-      </button>
-      <button md-menu-item>
-        <md-icon>create_new_folder</md-icon>
-        <span>Folder</span>
-      </button>
-      <button md-menu-item>
-        <md-icon>insert_drive_file</md-icon>
-        <span>File Folder</span>
-      </button>
-      <button md-menu-item>
-          <md-icon>create_new_folder</md-icon>
-          <span>Folder upload</span>
-        </button>
-  </md-menu>
+  <button md-menu-item>
+    <md-icon>insert_drive_file</md-icon>
+    <span>Text file</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>create_new_folder</md-icon>
+    <span>Folder</span>
+  </button>
+  <md-divider></md-divider>
+  <button md-menu-item>
+    <md-icon>insert_drive_file</md-icon>
+    <span>File Folder</span>
+  </button>
+  <button md-menu-item>
+    <md-icon>create_new_folder</md-icon>
+    <span>Folder upload</span>
+  </button>
+</md-menu>

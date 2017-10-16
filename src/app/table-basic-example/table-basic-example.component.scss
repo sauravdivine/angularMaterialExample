@@ -9,3 +9,9 @@
   overflow: auto;
   max-height: 100%;
 }
+
+.nameCell{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}

@@ -16,7 +16,9 @@ import {
   MatTableModule,
   MatCardModule,
   MatMenuModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatTooltipModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -27,6 +29,7 @@ import { CardFancyExampleComponent } from './card-fancy-example/card-fancy-examp
 import { AccountCardComponent } from './account-card/account-card.component';
 import { MainContentHeaderComponent } from './main-content-header/main-content-header.component';
 import { SpaceUsedPrograssComponent } from './space-used-prograss/space-used-prograss.component';
+import { CheclComponent } from './checl/checl.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { SpaceUsedPrograssComponent } from './space-used-prograss/space-used-pro
     CardFancyExampleComponent,
     AccountCardComponent,
     MainContentHeaderComponent,
-    SpaceUsedPrograssComponent
+    SpaceUsedPrograssComponent,
+    CheclComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ import { SpaceUsedPrograssComponent } from './space-used-prograss/space-used-pro
     MdListModule,
     MatTableModule, MatCardModule,
     MatMenuModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTooltipModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

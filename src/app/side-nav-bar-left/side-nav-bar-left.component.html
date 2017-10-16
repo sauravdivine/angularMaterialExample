@@ -1,44 +1,24 @@
-<div>
-  <md-sidenav-container class="example-container">
-    <md-sidenav #sideFixed class="example-sidenav" mode="side" opened="true">
-      <md-nav-list>
-        <md-list-item *ngFor="let folder of folders">
-          <md-icon md-list-icon>{{folder.icon}}</md-icon>
-          <h4 md-line>{{folder.name}}</h4>
-        </md-list-item>
-      </md-nav-list>
-      <div class="example-spacer"></div>
-      <md-divider></md-divider>
-      <app-space-used-prograss>loading...</app-space-used-prograss>
+<md-sidenav-container class="example-container">
+  <md-sidenav #sideFixed class="sidenav" mode="side" opened="true">
+    <md-nav-list>
+      <md-list-item class="navItem" *ngFor="let folder of folders; let idx = index" [ngClass]="{'active': active==idx}" (click)="active = idx" (click)="openSnackBar(folder.name , 'UNDO')">
+        <md-icon md-list-icon>{{folder.icon}}</md-icon>
+        <h4 md-line>{{folder.name}}</h4>
+      </md-list-item>
+    </md-nav-list>
+    <div class="example-spacer"></div>
+    <md-divider></md-divider>
+    <app-space-used-prograss>loading...</app-space-used-prograss>
+  </md-sidenav>
 
+  <md-sidenav #sidenav align="end" mode="side" opened="true" class="right-sidenav">
+        
+        <app-card-fancy-example>card loading....</app-card-fancy-example>
     </md-sidenav>
 
-    <!--<md-sidenav #sidenav align="end" mode="side" opened="true" class="example-sidenav">
-    <md-list>
-
-      <app-card-fancy-example>card loading....</app-card-fancy-example>
-
-      <md-divider></md-divider>
-
-      <app-card-fancy-example>card loading...</app-card-fancy-example>
-
-    </md-list>
-  </md-sidenav>-->
-
-    <div class="example-sidenav-content">
-      <!-- <div class="content-header">
-        <app-main-content-header></app-main-content-header>
-      </div> -->
-      <div class="content">
-        <app-table-basic-example>table loading...</app-table-basic-example>
-      </div>
-
-
-      <!--<button type="button" md-button (click)="sidenav.open()">
-      Open sidenav
-    </button>-->
+  <div class="sidenav-content">
+    <div class="content">
+      <app-table-basic-example>table loading...</app-table-basic-example>
     </div>
-
-
-  </md-sidenav-container>
-</div>
+  </div>
+</md-sidenav-container>
