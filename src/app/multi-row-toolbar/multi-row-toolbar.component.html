@@ -2,24 +2,26 @@
   <md-icon>storage</md-icon>
   <span> &nbsp;Drive</span>
   <span class="example-spacer"></span>
-  <md-form-field class="example-full-width">
+  <!-- <md-form-field class="example-full-width">
     <md-icon mdPrefix>search</md-icon>
     <input mdInput type="search" placeholder="Search " value="">
-  </md-form-field>
+  </md-form-field> -->
   <!-- <md-icon class="example-icon">favorite</md-icon>
     <md-icon class="example-icon">fingerprint</md-icon> -->
-    <md-icon class="example-icon" mdTooltip="Themes">format_color_fill</md-icon>
+  <input class="search-input" type="search" placeholder="Search " value="">
+  <md-icon class="example-icon" mdTooltip="Themes">format_color_fill</md-icon>
   <div md-card-avatar class="example-header-image" [mdMenuTriggerFor]="profileMenu"></div>
   <md-toolbar-row>
-    <button md-raised-button color="accent" [mdMenuTriggerFor]="newMenu" >NEW</button>
-    <span class="example-spacer"></span>
+    <button md-raised-button color="accent" [mdMenuTriggerFor]="newMenu">NEW</button>
+    <span class="breadcrum">Drive > one > folder >Drive > one > folder >Drive > one > folder ></span>
+    <!-- <span class="example-spacer"></span> -->
     <md-icon class="example-icon" mdTooltip="Get share link">link</md-icon>
     <md-icon class="example-icon" mdTooltip="Share">person_add</md-icon>
     <md-icon class="example-icon" mdTooltip="Delete">delete</md-icon>
-    <md-icon class="example-icon" mdTooltip="options">more_vert</md-icon>    
+    <md-icon class="example-icon" mdTooltip="options">more_vert</md-icon>
     <md-icon class="example-icon" mdTooltip="Grid view">view_module</md-icon>
     <md-icon class="example-icon" mdTooltip="info">info</md-icon>
-    <md-icon class="example-icon"mdTooltip="Settings">settings</md-icon>
+    <md-icon class="example-icon" mdTooltip="Settings">settings</md-icon>
   </md-toolbar-row>
 </md-toolbar>
 <md-menu #profileMenu="mdMenu">
